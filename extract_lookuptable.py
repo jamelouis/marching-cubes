@@ -14,10 +14,10 @@ with open("TrianglesS.lut.txt","r") as f:
         lookuptable.append(faces)
 
 with open("lookuptable.py","w") as f:
-    f.write("import glm")
+    f.write("import glm\n")
     f.write("lookuptable = [")
     for faces in lookuptable:
-        line = '['
+        line = '\t['
         for i in range(0,len(faces),3):
             line += 'glm.vec3('
             line += str(faces[i])
