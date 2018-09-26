@@ -1,3 +1,5 @@
+# lookuptable download from 
+# http://users.polytech.unice.fr/~lingrand/MarchingCubes/applet.html
 
 lookuptable = []
 
