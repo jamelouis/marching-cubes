@@ -1,18 +1,12 @@
 import glm
 import lookuptable 
-import random
-
-test_data0 = [
-        [[1,0],[0,0]],
-        [[0,1],[0,0]],
-        ]
 
 def marching_cubes(data, objname="marching_cubes.obj"):
     vertices = []
     faces = []
     xDim = len(data)-1
     yDim = len(data[0]) - 1
-    zDim = len(data[1]) - 1
+    zDim = len(data[0][0]) - 1
     for j in range(yDim):
         for i in range(xDim):
             for k in range(zDim):
@@ -28,7 +22,6 @@ def marching_cubes(data, objname="marching_cubes.obj"):
                 index = v1 | v2 << 1 | v3 << 2 | v4 << 3 | v5 << 4 
                 index = index | v6 << 5 | v7 << 6 | v8 << 7
                
-                
                 base_face_index = len(vertices)
                 # see marching cubes papers figure 4. cuber numbering
                 e = []
